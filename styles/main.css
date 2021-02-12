@@ -65,12 +65,16 @@ a.button1:hover{
   right: 0;
 }
 
-#beenBtn {
-  float: right;
+#beenBtn, .addBeen {
+  /* float: right; */
   padding: 4.9px 26.6px;
 }
 
-#container, #park {
+.button2:visited {
+  background-color: darkcyan;
+}
+
+#container {
   margin: 0;
   padding: 0;
 }
@@ -82,12 +86,30 @@ a.button1:hover{
 }
 
 .thumbnail {
-  border: 0;
+  border: 1px solid white;
   border-radius: 0;
-  background-color: gray;
+  background-color: rgb(37, 39, 44);
 }
 
 .thumbnails {
   margin: 0;
   padding: 0;
+}
+
+.thumbnail h2, .thumbnail p {
+  color: white;
+  text-align: center;
+  /* max-width: 875px; */
+}
+
+@media screen and (min-width: 480px) {
+  #beenBtn, .addBeen {
+    float: right;
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .thumbnail p {
+    padding: 0 20%;
+  }
 }

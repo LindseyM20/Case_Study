@@ -17,33 +17,47 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" type="text/css" href="./styles/form.css">
   <title>National Parks Bucket/Been List</title>
   <style>
   </style>
 </head>
 
 <body>
-
-  <div id="hero">
-    <a href="./login.html" id="loginBtn" class="button1">
-      Log In
-    </a>
-    <h1 id="mainTitle">National Parks</h1>
+  <div id="tableContainer">
+    <h2>
+      <!-- Park name goes here (updated dynamically) -->
+      Acadia National Park
+      <br/>
+    </h2>
+    <table>
+      <tr>
+        <td>Date visited:</td>
+        <td>
+          <label for="date"></label>
+          <input type="date" name="date">
+          <br/>
+        </td>
+      </tr>
+      <tr>
+        <td>Would Recommend?</td>
+        <td>
+          <label for="recommend"></label>
+          <select id="cars">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <br/>
+        </td>
+      </tr>
+      <tr>
+        <td id="journalLabel">Journal:</td>
+        <td></td>
+      </tr>
+      
+    </table>
+    <textarea></textarea>
   </div>
-  <div id="container">
-    <ul id="parkList" class="thumbnails">
-      <li class="parkLi">
-        <!-- <div class="thumbnail"> -->
-        <!-- <img src="./images/acadia.jpg" alt="Acadia National Park">
-          <h2 class="parkTitle">Thumbnail label</h2>
-          <p class="parkSummary">Thumbnail caption...</p> -->
-        <!-- </div> -->
-      </li>
-    </ul>
-  </div>
-  <p style="color:white; padding: 2%">This page will contain all the U.S. National Parks eventually, but for now I just started with the first 5 in alphabetical order.</p>
-
 
 </body>
 

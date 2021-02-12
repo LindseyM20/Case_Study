@@ -1,0 +1,52 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: rgb(37, 39, 44);
+}
+
+#tableContainer {
+  width: calc(60% + 50px);
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  border:0.1em solid #FFFFFF;
+  
+}
+
+table {
+  margin: 20px;
+ 
+}
+
+h2 {
+  padding: 30px 0;
+}
+
+input, select, textarea {
+  padding: 2px;
+  margin: 10px;
+}
+
+#journalLabel {
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+textarea {
+  margin-top: 0;
+  margin-bottom: 5%;
+  width: 255px;
+  height: 150px;
+}
+
+@media screen and (min-width: 510px) {
+  textarea {
+    width: 315px;
+    height: 150px;
+  }
+}
