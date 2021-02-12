@@ -30,24 +30,44 @@ html, body {
   font-size: 10vw;
 }
 
-.heroBtn {
-  color: white;
-  
-  width: 95px;
-  margin: 1%;
-  position: relative;
-  top: 20%;
+
+
+
+a.button1{
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0.3em;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color: #3a3a3a48;
+  text-align:center;
+  transition: all 0.2s;
+}
+a.button1:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+  a.button1 {
+    display: block;
+    margin :0.4em auto;
+  }
 }
 
-#bucketBtn {
-  /* haven't gotten color working */
-  /* note to self: revisit this resource: https://stackoverflow.com/questions/28261287/how-to-change-btn-color-in-bootstrap */
-  background-color: #1e2f44 !important;
+#loginBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #beenBtn {
-  background-color: #1e2f44;
   float: right;
+  padding: 4.9px 26.6px;
 }
 
 #container, #park {

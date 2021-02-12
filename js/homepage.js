@@ -37,13 +37,14 @@ for (i=0; i<parks.length; i++) {
   const ul = document.getElementById('parkList');
   var newPark = document.createElement('li');
   // newPark.textContent = parks[i].name;
-  
   // newPark.
-
-
   ul.appendChild(newPark);
+
+
+
   var img = document.createElement('img');
   img.setAttribute('src', parks[i].photoLocal);
+  // img.setAttribute('', parks[i].photoLocal);
   newPark.appendChild(img);
 }
 console.log(newPark);
