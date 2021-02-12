@@ -4,18 +4,23 @@ html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   background-color: rgb(37, 39, 44);
+  color: black;
 }
 
+/* need to figure out why text in inputs is white */
 #tableContainer {
   width: calc(60% + 50px);
   margin: 5% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: black;
   justify-content: center;
   border:0.1em solid #FFFFFF;
-  
+}
+
+.white {
+  color: white;
 }
 
 table {

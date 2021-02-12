@@ -25,25 +25,25 @@
 
 <body>
   <div id="tableContainer">
-    <h2>
+    <h2 class="white">
       <!-- Park name goes here (updated dynamically) -->
       Acadia National Park
       <br/>
     </h2>
     <table>
       <tr>
-        <td>Date visited:</td>
+        <td class="white">Date visited:</td>
         <td>
-          <label for="date"></label>
+          <!-- <label for="date"></label> -->
           <input type="date" name="date">
           <br/>
         </td>
       </tr>
       <tr>
-        <td>Would Recommend?</td>
+        <td class="white">Would Recommend?</td>
         <td>
-          <label for="recommend"></label>
-          <select id="cars">
+          <!-- <label for=""></label> -->
+          <select id="y/n">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
@@ -51,13 +51,15 @@
         </td>
       </tr>
       <tr>
-        <td id="journalLabel">Journal:</td>
+        <td id="journalLabel" class="white">Journal:</td>
         <td></td>
       </tr>
       
     </table>
     <textarea></textarea>
   </div>
+
+  <!-- Add button to return to previous page -->
 
 </body>
 
