@@ -61,6 +61,12 @@ html, body {
   flex-wrap: wrap;
 }
 
+.thumbnail {
+  border: 0;
+  border-radius: 0;
+  background-color: gray;
+}
+
 .thumbnails {
   margin: 0;
   padding: 0;
