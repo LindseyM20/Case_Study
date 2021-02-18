@@ -90,12 +90,10 @@ if (pathname.includes('homepage')) {
 }
 
 
-// Adding Park to beenParks array when that park's "been" button is clicked
+// Click event handler: Adding Park to beenParks array when that park's "been" button is clicked
 document.querySelectorAll('.beenBtn').forEach(item => {
   item.addEventListener('click', function() {
-    console.log("click");
-    // console.log(this.h2.textContent);
-    console.log(this.id);
+    console.log(`clicked on 'been here' button for park[${this.id}]: ${parks[this.id].name}`);
     beenParks.push(parks[this.id]);
     console.log(beenParks);
   })
