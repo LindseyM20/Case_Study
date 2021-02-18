@@ -37,6 +37,8 @@ const parks = [
   }
 ];
 
+console.log(window.location);
+
 // Adding Parks to user's Been list
 var beenArray = [];
 const addToBeen = (park) => {
