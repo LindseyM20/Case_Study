@@ -116,17 +116,17 @@ for (i=0; i<parks.length; i++) {
   p.textContent = parks[i].summary;
   div.appendChild(p);
 
-  var addBucket = document.createElement('a');
-  addBucket.textContent = "+ Bucket List";
-  addBucket.setAttribute('class', 'button1 button2');
-  // addBucket.setAttribute('onclick', addToBucket());
-  div.appendChild(addBucket);
+  // var addBucket = document.createElement('a');
+  // addBucket.textContent = "+ Bucket List";
+  // addBucket.setAttribute('class', 'button1 button2');
+  // // addBucket.setAttribute('onclick', addToBucket());
+  // div.appendChild(addBucket);
 
-  var addBeen = document.createElement('a');
-  addBeen.textContent = "+ Been Here";
-  addBeen.setAttribute('class', "addBeen button1 button2");
-  // addBeen.setAttribute('onclick', 'addToBeen()');
-  div.appendChild(addBeen);
+  // var addBeen = document.createElement('a');
+  // addBeen.textContent = "+ Been Here";
+  // addBeen.setAttribute('class', "addBeen button1 button2");
+  // // addBeen.setAttribute('onclick', 'addToBeen()');
+  // div.appendChild(addBeen);
 }
 
 
