@@ -1,4 +1,5 @@
 // e.preventDefault
+var pathname = window.location.pathname;
 var beenParks = [];
 var bucketParks = [];
 const parks = [
@@ -41,7 +42,8 @@ const parks = [
 
 console.log(window.location);
 // Populating the main page with photos and summaries of all the parks
-if (window.location.pathname == "/C:/Users/linds/Documents/TEK_Global/Case_Study/Case_Study/homepage.html") {
+if (pathname.includes('homepage')) {
+  console.log(pathname.includes('homepage'));
   for (i=0; i<parks.length; i++) {
     var data = parks[i];
     const ul = document.getElementById('parkList');
@@ -100,11 +102,12 @@ document.querySelectorAll('.beenBtn').forEach(item => {
 })
 
 
-const populateBeenPage = (park) => {
+function populateBeenPage(array) {
   console.log("In the populateBeenPage function");
+  console.log(array);  // result is an empty array. why?
   console.log(beenParks);
-  beenParks.push(park);
-  beenParks.forEach((v, i, a)=> {
+  // beenParks.push(park);
+  // beenParks.forEach((v, i, a)=> {
 
     // var beenList = document.getElementById('beenList');
     // console.log(beenList);
@@ -145,9 +148,14 @@ const populateBeenPage = (park) => {
     // addBeen.setAttribute('class', "addBeen button1 button2");
     // addBeen.setAttribute('onclick', "populateBeenPage()");
     // beenDiv.appendChild(addBeen);
-  })
-  
+  // })
 }
+
+// To Do: fix this function so the beenParks array's contents aren't erased
+if (pathname.includes('been')) {
+  populateBeenPage(beenParks);
+}
+
 
 // Adding Parks to user's Bucket list
 // const populateBucket = () => {
