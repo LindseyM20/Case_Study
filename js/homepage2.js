@@ -1,4 +1,6 @@
 // e.preventDefault
+var beenParks = [];
+var bucketParks = [];
 const parks = [
   {
     "name": "Acadia National Park",
@@ -37,12 +39,72 @@ const parks = [
   }
 ];
 
-// Adding Parks to user's Been list
-var beenArray = [];
-const addToBeen = (park) => {
-  console.log("In the addToBeen")
-  beenArray.push(park);
-  beenArray.forEach((v, i, a)=> {
+console.log(window.location);
+// Populating the main page with photos and summaries of all the parks
+if (window.location.pathname == "/C:/Users/linds/Documents/TEK_Global/Case_Study/Case_Study/homepage.html") {
+  for (i=0; i<parks.length; i++) {
+    var data = parks[i];
+    const ul = document.getElementById('parkList');
+  
+    var newPark = document.createElement('li');
+    newPark.setAttribute('class', 'parkLi');
+    ul.appendChild(newPark);
+  
+    var div = document.createElement('div');
+    div.setAttribute('class', 'thumbnail');
+    newPark.appendChild(div);
+  
+    var img = document.createElement('img');
+    img.setAttribute('src', parks[i].photoLocal);
+    img.setAttribute('alt', parks[i].name);
+    div.appendChild(img);
+  
+    var h2 = document.createElement('h2');
+    h2.setAttribute('class', 'parkTitle');
+    h2.textContent = parks[i].name;
+    div.appendChild(h2);
+  
+    var p = document.createElement('p');
+    p.setAttribute('class', 'parkSummary');
+    p.textContent = parks[i].summary;
+    div.appendChild(p);
+  
+    var addBucket = document.createElement('a');
+    addBucket.textContent = "+ Bucket List";
+    addBucket.setAttribute('class', 'button1 button2');
+    // addBucket.setAttribute('onclick', addToBucket());
+    div.appendChild(addBucket);
+  
+    var addBeen = document.createElement('a');
+    addBeen.textContent = "+ Been Here";
+    addBeen.setAttribute('class', "beenBtn button1 button2");
+    addBeen.setAttribute('id', i);
+    // addBeen.setAttribute('onclick', addToBeen(i));
+    div.appendChild(addBeen);
+  
+    console.log(i);
+  }
+  
+}
+
+
+// Adding Park to beenParks array when that park's "been" button is clicked
+document.querySelectorAll('.beenBtn').forEach(item => {
+  item.addEventListener('click', function() {
+    console.log("click");
+    // console.log(this.h2.textContent);
+    console.log(this.id);
+    beenParks.push(parks[this.id]);
+    console.log(beenParks);
+  })
+})
+
+
+const populateBeenPage = (park) => {
+  console.log("In the populateBeenPage function");
+  console.log(beenParks);
+  beenParks.push(park);
+  beenParks.forEach((v, i, a)=> {
 
     // var beenList = document.getElementById('beenList');
     // console.log(beenList);
@@ -75,71 +137,19 @@ const addToBeen = (park) => {
     // var addBucket = document.createElement('a');
     // addBucket.textContent = "+ Bucket List";
     // addBucket.setAttribute('class', "button1 button2");
-    // addBucket.setAttribute('onclick', addToBucket());
+    // addBucket.setAttribute('onclick', populateBucket());
     // beenDiv.appendChild(addBucket);
     
     // var addBeen = document.createElement('a');
     // addBeen.textContent = "+ Been Here";
     // addBeen.setAttribute('class', "addBeen button1 button2");
-    // addBeen.setAttribute('onclick', "addToBeen()");
+    // addBeen.setAttribute('onclick', "populateBeenPage()");
     // beenDiv.appendChild(addBeen);
   })
   
 }
 
-// Populating the main page with photos and summaries of all the parks
-for (i=0; i<parks.length; i++) {
-  const ul = document.getElementById('parkList');
-
-  var newPark = document.createElement('li');
-  newPark.setAttribute('class', 'parkLi');
-  ul.appendChild(newPark);
-
-  var div = document.createElement('div');
-  div.setAttribute('class', 'thumbnail');
-  newPark.appendChild(div);
-
-  var img = document.createElement('img');
-  img.setAttribute('src', parks[i].photoLocal);
-  img.setAttribute('alt', parks[i].name);
-  div.appendChild(img);
-
-  var h2 = document.createElement('h2');
-  h2.setAttribute('class', 'parkTitle');
-  h2.textContent = parks[i].name;
-  div.appendChild(h2);
-
-  var p = document.createElement('p');
-  p.setAttribute('class', 'parkSummary');
-  p.textContent = parks[i].summary;
-  div.appendChild(p);
-
-  var addBucket = document.createElement('a');
-  addBucket.textContent = "+ Bucket List";
-  addBucket.setAttribute('class', 'button1 button2');
-  // addBucket.setAttribute('onclick', addToBucket());
-  div.appendChild(addBucket);
-
-  var addBeen = document.createElement('a');
-  addBeen.textContent = "+ Been Here";
-  addBeen.setAttribute('class', "addBeen button1 button2");
-  // addBeen.setAttribute('onclick', 'addToBeen()');
-  div.appendChild(addBeen);
-}
-
-
-var addBeenBtns = []
-addBeenBtns = document.getElementsByClassName("addBeen");
-for (i=0; i<addBeenBtns.length; i++) {
-  addBeenBtns[i].addEventListener('click', () => {
-    console.log(parks[i]);
-    addToBeen(parks[i]);
-  });
-}
-console.log(addBeenBtns)
-
-
 // Adding Parks to user's Bucket list
-// const addToBucket = () => {
+// const populateBucket = () => {
 
 // }

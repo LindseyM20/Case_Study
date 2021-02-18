@@ -65,7 +65,7 @@ a.button1:hover{
   right: 0;
 }
 
-#beenBtn, .addBeen {
+.beenBtn, .addBeen {
   /* float: right; */
   padding: 4.9px 26.6px;
 }
@@ -103,7 +103,7 @@ a.button1:hover{
 }
 
 @media screen and (min-width: 480px) {
-  #beenBtn, .addBeen {
+  .beenBtn, .addBeen {
     float: right;
   }
 }

@@ -1,5 +1,8 @@
 # Case Study
 
+## Repository:
+https://github.com/LindseyM20/Case_Study
+
 
 ## Deployed at:
 https://lindseym20.github.io/Case_Study/
