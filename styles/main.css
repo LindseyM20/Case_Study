@@ -6,6 +6,10 @@ html, body {
   background-color: rgb(37, 39, 44);
 }
 
+ul {
+  list-style: none;
+}
+
 #hero {
   background-image:  linear-gradient(
     rgba(0, 0, 0, 0.5),
