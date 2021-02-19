@@ -74,9 +74,11 @@ a.button1:hover{
   padding: 4.9px 26.6px;
 }
 
-.button2:visited {
-  background-color: darkcyan;
-}
+/* Figure out how to make buttons indicate whether they're on the list */
+/* (This isn't working yet)
+/* .button2:visited {
+  background-color: red;
+} */
 
 #container {
   margin: 0;
