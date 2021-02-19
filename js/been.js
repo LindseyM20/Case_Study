@@ -1,4 +1,5 @@
-// Get stored cities from localStorage and parse the JSON string to an array
+// Get stored parks from localStorage and parse the JSON string to an array
+// Using localStorage for now, until I get a database set up.
 var storedBeen = JSON.parse(localStorage.getItem("beenList")) || [];
 var beenParks = [];
 console.log(storedBeen);
@@ -16,7 +17,6 @@ function arrayify() {
 function populateBeenPage() {
   console.log("In the populateBeenPage function");
   console.log(beenParks);
-  // beenParks.push(park);
   beenParks.forEach((park) => {
 
     var beenList = document.getElementById('beenList');
@@ -51,5 +51,5 @@ function populateBeenPage() {
     // addBucket.setAttribute('onclick', populateBucket());
     // beenDiv.appendChild(addBucket);
 
-  })
+  });
 };
